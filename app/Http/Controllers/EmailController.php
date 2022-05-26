@@ -19,12 +19,12 @@ class EmailController extends Controller
         if ($validator->fails()) {
             return response()->json(["error" => $validator->errors()->first()], 422);
         }
-        $email_to=$request->email;
+        $email_from=$request->email;
         $message=$request->message;
         $title=$request->name;
-        Mail::send([], [], function ($mail) use ($email_to, $message,$title) {
-            $mail->from('noreply@lakuemas.com', 'Lakuemas');
-            $mail->to($email_to);
+        Mail::send([], [], function ($mail) use ($email_from, $message,$title) {
+            $mail->from($email_from);
+            $mail->to('info@sarimukti.my.id', 'Sarimukti');
             $mail->subject($title);
             $mail->setBody($message, 'text/html');
         });
