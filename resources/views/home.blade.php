@@ -21,22 +21,21 @@
             <br/>
             <h3 class="text-center">Punya saran?</h3>
             <div class="form">
-            <form action="{{url('/email')}}" method="post">
-                @csrf <!-- {{ csrf_field() }} -->
+            <form id="send_mail">
                 <br/>
                 <div class="row">
                     <div class="col-12">Nama</div>
-                    <div class="col-12"><input required pattern="\S(.*\S)?" class="form-control input-sm" type="text" name="name"></div>
+                    <div class="col-12"><input required pattern="\S(.*\S)?" id="name" class="form-control input-sm" type="text" name="name"></div>
                 </div>
                 <br/>
                 <div class="row">
                     <div class="col-12">Email</div>
-                    <div class="col-12"><input required pattern="\S(.*\S)?" class="form-control input-sm" type="email" name="email"></div>
+                    <div class="col-12"><input required pattern="\S(.*\S)?" class="form-control input-sm" id="email" type="email" name="email"></div>
                 </div>
                 <br/>
                 <div class="row">
                     <div class="col-12">Pesan</div>
-                    <div class="col-12"><textarea required class="form-control input-sm" rows="4" cols="50" name="message"></textarea></div>
+                    <div class="col-12"><textarea required class="form-control input-sm" rows="4" cols="50" id="message" name="message"></textarea></div>
                 </div>
                 <br/>
                 <button class="btn btn-success" type="submit">Kirim</button>
@@ -47,4 +46,28 @@
         </div>
     </div>
 </div>
+
+
+<script>
+      $(".btn-success").on("click", function() {
+        $.ajax({
+            url: '/email',
+            type : 'POST',
+            data: {
+                "_token": "{{ csrf_token() }}",
+                name:$('#name').val(),
+                message:$('#message').val(),
+                email:$('#email').val(),
+            },
+            success: function(data) {
+                console.log(data);
+                alert(data.message);
+            },
+            error: function(data) {
+                alert('Gagal mengirim pesan');
+            }
+        });
+    });
+</script>
+
 @include('layout.footer')

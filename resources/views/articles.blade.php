@@ -14,7 +14,7 @@
                             @if($article->image)
                                 <img src="{{$article->image}}"  class="img-fluid" style="min-width: 80px" alt="{{$article->title}}">
                             @else
-                                <img src="sarimukti_logo.png"  class="img-fluid" style="min-width: 80px" alt="Sarimukti">
+                                <img src="{{env('public_folder')}}/sarimukti_logo.png"  class="img-fluid" style="min-width: 80px" alt="Sarimukti">
                             @endif
                         </a>
                         <span>diunggah tanggal {{date('d F Y',strtotime($article->created_at))}} </span>

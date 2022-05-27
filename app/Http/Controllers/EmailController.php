@@ -15,6 +15,7 @@ class EmailController extends Controller
             'message' => 'required',
             'name' => 'required',
         ]);
+        info($request);
 
         if ($validator->fails()) {
             return response()->json(["error" => $validator->errors()->first()], 422);
