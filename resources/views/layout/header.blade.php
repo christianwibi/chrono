@@ -96,7 +96,7 @@
                             <img src="{{env('PUBLIC_FOLDER')}}/sarimukti_logo.png" class="img-fluid" style="min-width: 80px" alt="Sarimukti">
                         </a>
                     </div>
-                    <div class="col-9 middle">
+                    <div class="col-sm-12 col-md-9 middle">
                         <div class="col-8">
                             <nav class="nav nav-tab">
                             <a class="nav-item nav-link" href="{{route('home')}}">Beranda</a>
@@ -106,15 +106,15 @@
                             <a class="nav-item nav-link" href="{{route('about')}}">Tentang Penulis</a>
                         </nav>
                         </div>
-                        <div class="col-4 text-right">
+                        <div class="col-sm-12 col-md-4  text-right">
                             <form action="{{url('/search')}}" method="post">
                                 @csrf <!-- {{ csrf_field() }} -->
-                                <input required pattern="\S(.*\S)?" type="text" placeholder="Pencarian.." name="search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
+                                <input style="width: 80%" required pattern="\S(.*\S)?" type="text" placeholder="Pencarian.." name="search">
+                                <button style="width: 15%" type="submit"><i class="fa fa-search"></i></button>
                             </form>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col text-center">
                         Wanna translate?
                         <div id="google_translate_element"></div>
                     </div>

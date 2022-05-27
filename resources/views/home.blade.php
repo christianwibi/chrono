@@ -4,25 +4,22 @@
         <div class="col">
         </div>
         <div class="col-9 content">
-            <h2>Selamat datang di Sarimukti!</h2>
-            <br/>
-            <p>Halo! Selamat menjelajah!</p>
+            <h2 class="text-center">Selamat datang di Sarimukti!</h2>
             <br/>
             <br/>
-            <h3 class="text-center">Tulisan Terbaru</h3>
+            <h3>Tulisan Terbaru</h3>
             <ul>
             @forelse ($articles as $article)
                 <li><a href="#">{{$article->title}}</a></li>
             @empty
-            <p>Belum ada data</p>
+            <p>Belum ada tulisan</p>
             @endforelse
             </ul>
             <br/>
             <br/>
-            <h3 class="text-center">Punya saran?</h3>
+            <h3>Punya saran?</h3>
             <div class="form">
             <form id="send_mail">
-                <br/>
                 <div class="row">
                     <div class="col-12">Nama</div>
                     <div class="col-12"><input required pattern="\S(.*\S)?" id="name" class="form-control input-sm" type="text" name="name"></div>

@@ -4,7 +4,7 @@
         <div class="col">
         </div>
         <div class="col-9 content">
-            <h2>Kategori</h2>
+            <h2 class="text-center">Kategori</h2>
             <br/>
             <div class="row">
             @forelse ($categories as $category)

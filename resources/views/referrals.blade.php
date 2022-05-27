@@ -4,7 +4,7 @@
         <div class="col">
         </div>
         <div class="col-9 content">
-            <h2>Daftar Kode Referral</h2>
+            <h2 class="text-center">Daftar Kode Referral</h2>
             <br/>
             <p>
                 Berikut adalah beberapa kode referral saya, yang jika digunakan saat registrasi bisa mendapatkan bonus. Sebelum digunakan, mohon perhatikan syarat ketentuan dan periode promo pada masing-masing platform atau lihat di beberapa artikel yang telah saya tulis.

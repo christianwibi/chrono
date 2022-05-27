@@ -4,7 +4,7 @@
         <div class="col">
         </div>
         <div class="col-9 content">
-            <h2>Daftar Tulisan</h2>
+            <h2 class="text-center">Daftar Tulisan</h2>
             <br/>
             <div class="container">
             @forelse ($articles as $article)
