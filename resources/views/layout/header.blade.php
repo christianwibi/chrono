@@ -93,7 +93,7 @@
                 <div class="row">
                     <div class="col">
                         <a href="{{route('home')}}">
-                            <img src="{{env('public_folder')}}/sarimukti_logo.png" class="img-fluid" style="min-width: 80px" alt="Sarimukti">
+                            <img src="{{env('PUBLIC_FOLDER')}}/sarimukti_logo.png" class="img-fluid" style="min-width: 80px" alt="Sarimukti">
                         </a>
                     </div>
                     <div class="col-9 middle">
