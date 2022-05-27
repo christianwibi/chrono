@@ -12,7 +12,7 @@
             @forelse ($articles as $article)
                 <li><a href="#">{{$article->title}}</a></li>
             @empty
-            <p>Belum ada tulisan</p>
+            Belum ada tulisan
             @endforelse
             </ul>
             <br/>
