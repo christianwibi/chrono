@@ -8,7 +8,7 @@
             <br/>
             <div class="row">
             @forelse ($categories as $category)
-                <div class="col-3 text-center"> <a href="#"> {{$category->name}}</a></div>
+                <div class="col-3 text-center"> <a href="{{url('/category')}}/{{$category->name}}"> {{$category->name}}</a></div>
             @empty
                 <span>Belum ada data</span>
             @endforelse

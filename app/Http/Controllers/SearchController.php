@@ -18,4 +18,15 @@ class SearchController extends Controller
 
         return view('articles',$data);
     }
+
+    public function category($category){
+        $data['articles'] = Article_model::whereHas('article_category', function ($query) use ($category) {
+                $query->whereHas('category', function ($query2) use ($category) {
+                    $query2->where("name", $category); });
+            })
+            ->paginate(10);
+
+        return view('articles',$data);
+    }
+
 }

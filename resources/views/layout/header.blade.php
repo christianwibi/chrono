@@ -102,7 +102,7 @@
                             <a class="nav-item nav-link" href="{{route('home')}}">Beranda</a>
                             <a class="nav-item nav-link" href="{{route('articles')}}">Daftar Tulisan</a>
                             <a class="nav-item nav-link" href="{{route('categories')}}">Kategori</a>
-                            <a class="nav-item nav-link" href="{{route('referrals')}}">Daftar Referral</a>
+                            <a class="nav-item nav-link" href="{{route('referrals')}}">Bantu Penulis</a>
                             <a class="nav-item nav-link" href="{{route('about')}}">Tentang Penulis</a>
                         </nav>
                         </div>

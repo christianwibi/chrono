@@ -8,7 +8,7 @@ use Validator;
 
 class EmailController extends Controller
 {
-    public function email(Request $request)
+    public function contactme(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',

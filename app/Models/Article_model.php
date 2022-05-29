@@ -14,4 +14,9 @@ class Article_model extends Model
 	{
 		return $this->hasMany(Article_categories_model::class, 'article_id');
 	}
+
+    public function user()
+	{
+		return $this->hasOne(User::class, 'id', 'created_by');
+	}
 }

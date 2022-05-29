@@ -10,7 +10,7 @@
             @forelse ($articles as $article)
             <div class="row" style="border: 1px solid black; border-radius: 5px; padding: 5px">
                     <div class="col-6">
-                        <a href="#">
+                        <a href="{{url('/article')}}/{{\Crypt::encryptString($article->id)}}">
                             @if($article->image)
                                 <img src="{{$article->image}}"  class="img-fluid" style="min-width: 80px" alt="{{$article->title}}">
                             @else
@@ -20,11 +20,11 @@
                         <span>diunggah tanggal {{date('d F Y',strtotime($article->created_at))}} </span>
                     </div>
                     <div class="col-6">
-                        <h3><a style='color:#774f43 !important;' href="#">{{$article->title}}</a></h3>
+                        <h3>{{$article->title}}</h3>
                         <p>
                             {{ strlen($article->content) > 200 ? substr($article->content,0,200)."..." : $article->content; }}</a>
                         </p>
-                        <a href="#"> Lanjutkan membaca</a>
+                        <a href="{{url('/article')}}/{{\Crypt::encryptString($article->id)}}"> Selengkapnya</a>
                     </div>
             </div>
             <br/>
